@@ -1,15 +1,15 @@
 /*------reset styles start-------*/
 * {
 	padding: 0;
-	margin : 0;
-	border : 0;
+	margin: 0;
+	border: 0;
 }
 
 *,
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
-	box-sizing        : border-box;
+	box-sizing: border-box;
 }
 
 :focus,
@@ -31,14 +31,15 @@ aside {
 
 html,
 body {
-	height                  : 100%;
-	width                   : 100%;
-	font-size               : 100%;
-	line-height             : 1;
-	font-size               : 14px;
-	-ms-text-size-adjust    : 100%;
-	-moz-text-size-adjust   : 100%;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	overflow: hidden;
 }
 
 input,
@@ -57,7 +58,7 @@ button {
 
 button::-moz-focus-inner {
 	padding: 0;
-	border : 0;
+	border: 0;
 }
 
 a,
@@ -83,100 +84,294 @@ h3,
 h4,
 h5,
 h6 {
-	font-size  : inherit;
+	font-size: inherit;
 	font-weight: inherit;
 }
 
 /*------reset styles end-------*/
 
 
-/* global styles */
-.global{
+/* =========================global styles========================= */
+
+.error{
+	margin-top: 50px;
+	font-size: 70px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.global {
 	background: url('../img/bg.jpg') 0 0/cover no-repeat;
 	min-height: 100vh;
 	min-width: 100vw;
 	display: flex;
 	flex-direction: column;
-}
-.container{
 
 }
 
-.header{
+.container {}
+
+.header {
 	flex: 0 0 auto;
 }
 
-.content{
+.content {
 	margin: 0 auto;
 	flex: 1 0 auto;
 	max-width: 1000px;
 	padding: 0;
 }
 
-.footer{
+.footer {
 	flex: 0 0 auto;
 }
 
 
-/*active classes*/
-.hide {
-	display: none;
-}
 
-.active{
+/* =====================header========================= */
 
-}
-
-/* header */
-
-.header{
+.header {
 	height: 60px;
 	background-color: rgba(0, 0, 0, 0.337);
 	display: flex;
 	align-items: center;
 }
-.menu{
+
+.menu {
 	width: 100%;
 }
-.menu__item-wrapper{
+
+.menu__item-wrapper {
 
 	display: flex;
 	justify-content: space-around;
 	font-size: 25px;
 }
-.menu__item{
-}
-.menu__item-link{
+
+.menu__item {}
+
+.menu__item-link {
 	color: white;
-}
-.menu__item-link.active{
-	color: red;
-	transition: 0.3s all;
+	transition: 0.5s all;
 }
 
-/* Main */
-.main{
- display: flex;
- height: 100%;
- justify-content: space-between;
- width: 600px;
- margin-top: 12%;
+.menu__item-link:hover {
+	color: red;
 }
-.main__link{
+
+.menu__item-link.active {
+	color: red;
+}
+
+/* =========================Main========================= */
+.main {
+	margin: 0 auto;
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	width: 600px;
+
+}
+.main_title{
+	margin-top: 12%;
+	text-align: center;
+	color: #ffffffc2;
+	font-size: 60px;
+}
+.main_title-red{
+	color: red;
+	font-size: 100px;
+	font-family: serif;
+	padding: 0 10px;
+}
+
+.main__link {
+
+	color: #ffffff;
+	transition: 0.6s all;
+	font-size: 25px;
+}
+
+.main__link:hover {
+	color: red;
+}
+
+.main__link-wrapper {
+	margin-top: 10%;
+	transition: 0.6s all;
+}
+
+.main__link-wrapper:hover {
+	transform: scale(1.1);
+}
+
+/* =========================create========================= */
+.create__form-wrapper {
+	margin-top: 12%;
+}
+
+.create__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.create__form-label {
+	position: relative;
+	text-align: center;
+	font-size: 25px;
+	color: #ffffff;
+	top: 10px
+}
+
+.create__form-textarea-wrapper {
+	position: relative;
+}
+
+.create__form-textarea-wrapper::before,
+.create__form-textarea-wrapper::after {
+	content: '';
+	position: relative;
+	display: block;
+	top: 0;
+	height: 1px;
+	width: 10%;
+	background: #ffffff;
+}
+
+.create__form-textarea-wrapper::after {
+	top: -201px;
+	right: -359px;
+}
+
+.create__form-textarea {
+	position: relative;
+	width: 400px;
+	height: 200px;
+	padding: 10px;
+	padding-top: 30px;
+	background: transparent;
+	border-bottom: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
 	color: #ffffff;
 }
-.main__link:hover{
-	transition: 0.4s all;
-	color: red;
-	transform: translateY(33px)
+
+.create__form-textarea::placeholder {
+	color: rgba(255, 255, 255, 0.612)
 }
 
 
+.create__form-button,
+.create__hidden-block-btn {
+	margin-top: 10px;
+	padding: 5px;
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+}
 
+.create__hidden-block-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.create__hidden-block-url {
+	color: #ffffff;
+	font-size: 24px;
 
-/* footer */
-.footer{
+}
+
+.create__hidden-block-btn {
+	margin-top: 20px;
+	font-size: 16px;
+	padding: 10px 25px;
+}
+.create__hidden-block-text{
+	margin-top: 20px;
+	color: #ffffff;
+}
+
+/* =========================about========================= */
+.about__wrapper {
+	margin-top: 5%;
+	color: #ffffffc2;
+}
+
+.about__title {
+	font-size: 30px;
+}
+
+.about__title::first-letter {
+	font-family: serif;
+	color: red;
+	font-size: 55px;
+}
+
+.about__subtitle {
+	font-size: 25px;
+
+}
+
+.about__subtitle::first-letter {
+	font-family: serif;
+	color: red;
+	font-size: 44px;
+}
+
+.about__text {
+	margin-top: 14px;
+	font-size: 18px;
+}
+/* =========================note========================= */
+.note__wrapper{
+	margin-top: 12%;
+}
+.note__more-info{
+	color: #ffffff;
+	margin-top: 20px;
+	text-align: center;
+}
+.note__form{
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+}
+.note__label{
+	text-align: center;
+	font-size: 25px;
+	color: #ffffff;
+
+}
+.note__input{
+	color: #ffffff;
+	margin-top: 20px;
+	width: 500px;
+	padding: 20px 10px;
+	background: transparent;
+	border: 1px #ffffff solid;
+}
+.note__btn{
+	color: red;
+	padding: 5px 0px;
+	font-size: 20px;
+}
+.note__btn-hide{
+	margin-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.note__title-hide{
+	font-size: 30px;
+	color: #ffffff
+}
+.note__text-hide{
+	margin-top: 20px;
+	color: #ffffff;
+
+}
+/* =========================footer========================= */
+.footer {
 	padding: 12px;
 	height: 60px;
 	background: #000000;
@@ -186,6 +381,18 @@ h6 {
 	align-items: center;
 	flex-direction: column;
 }
-.footer__date{
+
+
+.footer__date {
 	color: red;
+
 }
+
+
+
+/*=========================active classes=========================*/
+.hide {
+	display: none;
+}
+
+.active {}

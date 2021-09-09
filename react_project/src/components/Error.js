@@ -2,8 +2,8 @@
 
 function Error() {
   return (
-    <div>
-   
+    <div className='error'>
+		 	ERROR 404!!!
     </div>
   );
 }

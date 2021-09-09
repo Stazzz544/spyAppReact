@@ -57,20 +57,21 @@ function Note() {
 	}
 
 	return (
-		<div>
+		<div className='note__wrapper'>
 			<div className={lineClass}>
-				<h4>Note: </h4>
-				<div>{noteText}</div>
-				<div><button onClick={searchNote}>Смотреть еще один ноут</button></div>
+				<h4 className='note__title-hide' >Note: </h4>
+				<div className='note__text-hide'>{noteText}</div>
+				<div><button className='note__btn note__btn-hide' onClick={searchNote}>Show one moe note</button></div>
 			</div>
 			<div className={errorClass}>
-				<p>Произошла ошибка, такой хэш не найден!</p>
+				<p className='note__title-hide' >Error! Hash did not find...</p>
 			</div>
 			<div className={formClass}>
-				<form action='' onSubmit={getNote}>
-					<label htmlFor="url">Введите hash заметки</label>
-					<input type='text' name='url' id='url' className="form-control" />
-					<button type='submit' className='btn btn-primary'> искать note </button>
+				<form className='note__form' action='' onSubmit={getNote}>
+					<label className='note__label' htmlFor="url">Enter hash of note...</label>
+					<p className='note__more-info'>last part aflet "/"</p>
+					<input type='text' name='url' id='url' className="form-control note__input" />
+					<button type='submit' className='btn btn-primary note__btn'> search note </button>
 				</form>
 			</div>
 		</div>
