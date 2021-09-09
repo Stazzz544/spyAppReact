@@ -1,0 +1,191 @@
+/*------reset styles start-------*/
+* {
+	padding: 0;
+	margin : 0;
+	border : 0;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing        : border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height                  : 100%;
+	width                   : 100%;
+	font-size               : 100%;
+	line-height             : 1;
+	font-size               : 14px;
+	-ms-text-size-adjust    : 100%;
+	-moz-text-size-adjust   : 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border : 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size  : inherit;
+	font-weight: inherit;
+}
+
+/*------reset styles end-------*/
+
+
+/* global styles */
+.global{
+	background: url('../img/bg.jpg') 0 0/cover no-repeat;
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+.container{
+
+}
+
+.header{
+	flex: 0 0 auto;
+}
+
+.content{
+	margin: 0 auto;
+	flex: 1 0 auto;
+	max-width: 1000px;
+	padding: 0;
+}
+
+.footer{
+	flex: 0 0 auto;
+}
+
+
+/*active classes*/
+.hide {
+	display: none;
+}
+
+.active{
+
+}
+
+/* header */
+
+.header{
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.337);
+	display: flex;
+	align-items: center;
+}
+.menu{
+	width: 100%;
+}
+.menu__item-wrapper{
+
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+}
+.menu__item{
+}
+.menu__item-link{
+	color: white;
+}
+.menu__item-link.active{
+	color: red;
+	transition: 0.3s all;
+}
+
+/* Main */
+.main{
+ display: flex;
+ height: 100%;
+ justify-content: space-between;
+ width: 600px;
+ margin-top: 12%;
+}
+.main__link{
+	color: #ffffff;
+}
+.main__link:hover{
+	transition: 0.4s all;
+	color: red;
+	transform: translateY(33px)
+}
+
+
+
+
+
+/* footer */
+.footer{
+	padding: 12px;
+	height: 60px;
+	background: #000000;
+	color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+.footer__date{
+	color: red;
+}
