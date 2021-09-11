@@ -61,7 +61,7 @@ function Note() {
 			<div className={lineClass}>
 				<h4 className='note__title-hide' >Note: </h4>
 				<div className='note__text-hide'>{noteText}</div>
-				<div><button className='note__btn note__btn-hide' onClick={searchNote}>Show one moe note</button></div>
+				<div><button className='note__btn note__btn-hide' onClick={searchNote}>Show one more note</button></div>
 			</div>
 			<div className={errorClass}>
 				<p className='note__title-hide' >Error! Hash did not find...</p>

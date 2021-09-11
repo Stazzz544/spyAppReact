@@ -19,16 +19,19 @@ function App() {
 
 		 <Router>
 			 <Header></Header>
+			 <div className="content">
 			 <Switch>
-				<div className="content">
+				
 					<Route exact path="/" component={Main}/>
 					<Route exact path="/about" component={About}/>
 					<Route exact path="/create" component={Create}/>
 					<Route exact path="/note/" component={Note}/>
 					<Route exact path="/note/:noteURL" component={Note}/>
-				 <Route component={Error}/>
-				 </div>
+
+				 	<Route component={Error}/>
+				
 			 </Switch>
+			 </div>
 			 <Footer></Footer>
 		 </Router>
 
